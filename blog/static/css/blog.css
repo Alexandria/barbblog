@@ -1,0 +1,44 @@
+{% load static %}
+
+h1 {
+    color: #FCA205;
+    font-family: 'Monoton', cursive;
+}
+
+.jumbotron {
+    font-family: 'Monoton', cursive;
+
+}
+.background_img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-header{
+    background-color:black;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+body {
+    /* The image used */
+    background: url("/static/imgs/background.jpg") 50% 0 no-repeat fixed;
+    opacity: 0.9;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blogText {
+    font-family: 'Noto Serif', serif;
+    font-size: 40px;
+    color:lightgoldenrodyellow
+}
+
+.dttme {
+    color: lightgoldenrodyellow;
+    font-size: 20px
+}

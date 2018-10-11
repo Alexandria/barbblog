@@ -1,19 +1,72 @@
+{% load static %}
 <html>
-    <head>
-        <title>The Legend of Barb</title>
-    </head>
+<head>
+    <title>The Legend of Barb</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/strgrthngs.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+
+    <!--
+        https://fonts.google.com/specimen/Monoton?selection.family=Monoton
+        https://fonts.google.com/?selection.family=Monoton
+
+        Stranger THings Font...https://codepen.io/edelstone/pen/NAJqkY
+
+        Django https://tutorial.djangogirls.org/en/css/
+
+    -->
+
+</head>
     <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+        <div class = "page-header">
+            <div class="st">
+
+                <div class="st-top">
+                    <div class="st-bound st-bound-full"></div>
+                    <p><span class="st-drop st-stranger-s">J</span><span class="st-stranger-t">U</span>S<span class="st-stranger-r">T</span><span class="st-stranger-a">I</span><span class="st-stranger-n">C</span><span class="st-stranger-g">e</span><span class="st-stranger-e">Fo</span><span class="st-drop st-stranger-r-2">R</span>
+                    </p>
+                    <div class="st-bound st-bound-mini st-bound-left"></div>
+                    <div class="st-bound st-bound-mini st-bound-right"></div>
+                </div>
+                
+                <div class="st-bottom">
+                    <p><span class="st-things-t">B</span><span class="st-things-h">A</span><span class="st-things-i"></span><span class="st-things-n"></span><span class="st-things-g">R</span><span class="st-things-s">B</span></p>
+                </div>
+                    
+            </div>
+           
+        </div>
+       
+
+
+        <!--
+        <div class="jumbotron text-center">
+            <h1>The Legend of Barb</h1>
         </div>
 
+        https://www.computerhope.com/issues/ch000813.htm
+
+    ​<picture>
+                <source srcset="..." type="image/svg+xml">
+                <img src="blog\dog.png" class="img-fluid img-thumbnail" alt="...">
+        </picture>
+
+
+        -->
         {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+        <div class="blog">
+            <p><span class="dttme">published: {{ post.published_date }}</span></p>
+            <h1>{{ post.title }}</h1>
+            <p><span class="blogText">{{ post.text|linebreaksbr }}</span></p>
         </div>
         {% endfor %}
+          
+           
 
+ 
     </body>
 </html>

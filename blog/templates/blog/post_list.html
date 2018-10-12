@@ -11,62 +11,88 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 
     <!--
+
+        https://www.w3schools.com/css/css3_animations.asp
         https://fonts.google.com/specimen/Monoton?selection.family=Monoton
         https://fonts.google.com/?selection.family=Monoton
-
+        below is how to flip text
+        https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text
         Stranger THings Font...https://codepen.io/edelstone/pen/NAJqkY
-
+        https://www.w3schools.com/css/css3_animations.asp
         Django https://tutorial.djangogirls.org/en/css/
+        https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmousemove_over_enter
 
     -->
 
 </head>
-    <body>
-        <div class = "page-header">
-            <div class="st">
+<body>
 
-                <div class="st-top">
-                    <div class="st-bound st-bound-full"></div>
-                    <p><span class="st-drop st-stranger-s">J</span><span class="st-stranger-t">U</span>S<span class="st-stranger-r">T</span><span class="st-stranger-a">I</span><span class="st-stranger-n">C</span><span class="st-stranger-g">e</span><span class="st-stranger-e">Fo</span><span class="st-drop st-stranger-r-2">R</span>
-                    </p>
-                    <div class="st-bound st-bound-mini st-bound-left"></div>
-                    <div class="st-bound st-bound-mini st-bound-right"></div>
-                </div>
-                
-                <div class="st-bottom">
-                    <p><span class="st-things-t">B</span><span class="st-things-h">A</span><span class="st-things-i"></span><span class="st-things-n"></span><span class="st-things-g">R</span><span class="st-things-s">B</span></p>
-                </div>
-                    
+
+    <!--
+
+            <div class = "page-header">
+        <div class="st">
+
+            <div class="st-top">
+                <div class="st-bound st-bound-full"></div>
+                <p><span class="st-drop st-stranger-s">J</span><span class="st-stranger-t">U</span>S<span class="st-stranger-r">T</span><span class="st-stranger-a">I</span><span class="st-stranger-n">C</span><span class="st-stranger-g">e</span><span class="st-stranger-e">Fo</span><span class="st-drop st-stranger-r-2">R</span>
+                </p>
+                <div class="st-bound st-bound-mini st-bound-left"></div>
+                <div class="st-bound st-bound-mini st-bound-right"></div>
             </div>
-           
-        </div>
-       
 
+            <div class="st-bottom">
+                <p><span class="st-things-t">B</span><span class="st-things-h">A</span><span class="st-things-i"></span><span class="st-things-n"></span><span class="st-things-g">R</span><span class="st-things-s">B</span></p>
+            </div>
 
-        <!--
-        <div class="jumbotron text-center">
-            <h1>The Legend of Barb</h1>
         </div>
 
-        https://www.computerhope.com/issues/ch000813.htm
-
-        ​<picture>
-                <source srcset="..." type="image/svg+xml">
-                <img src="blog\dog.png" class="img-fluid img-thumbnail" alt="...">
-        </picture>
+    </div>
 
 
-        -->
-        {% for post in posts %}
-        <div class="blog">
-            <p><span class="dttme">published: {{ post.published_date }}</span></p>
-            <h1>{{ post.title }}</h1>
-            <p><span class="blogText">{{ post.text|linebreaksbr }}</span></p>
+
+
+
+
+
+    <div class="jumbotron text-center">
+        <h1>The Legend of Barb</h1>
+    </div>
+
+    https://www.computerhope.com/issues/ch000813.htm
+
+    ​<picture>
+            <source srcset="..." type="image/svg+xml">
+            <img src="blog\dog.png" class="img-fluid img-thumbnail" alt="...">
+    </picture>
+
+
+    -->
+
+    <div class="menu-container">
+        <div class="menu">
+            <div class="barb-pic"><img src="{% static 'imgs/barb_by_lornakelleherartScale.png' %}" /></div>
+            
         </div>
-        {% endfor %}
-          
-           
+        
+    </div>
+        <div class="blog-container">
 
- 
-    </body>
+            {% for post in posts %}
+            <div class="blog">
+                <span id="postTitle"><h1><a href="#">{{ post.title }}</a></h1></span>
+                <p><span class="dttme">published: {{ post.published_date }}</span></p>
+                <p><span class="blogText">{{ post.text|linebreaksbr }}</span></p>
+            </div>
+                {% endfor %}
+            
+
+
+
+
+
+        </div>
+        
+    
+</body>
 </html>

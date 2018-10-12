@@ -1,44 +1,50 @@
-{% load static %}
 
-h1 {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: #fff; /* Blue */
+    padding: 50px 50px 50px 50px;
+}
+
+.menu {
+
+    background-color:antiquewhite;
+    border: 10px solid #fff; /* For debugging */
+    width:3500;
+    
+}
+
+
+a {
     color: #FCA205;
     font-family: 'Monoton', cursive;
+    font-size:30px;
 }
 
-.jumbotron {
-    font-family: 'Monoton', cursive;
+    a:hover {
+        color: #FCA205;
+        text-decoration: none;
+        font-family: 'Monoton', cursive;
+        transform: scale(1, -1);
+    }
+ 
 
-}
-.background_img {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.page-header{
-    background-color:black;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
-}
-
-body {
-    /* The image used */
-    background: url("/static/imgs/background.jpg") 50% 0 no-repeat fixed;
-    opacity: 0.9;
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.blog-container {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    
+    
 }
 
-.blogText {
-    font-family: 'Noto Serif', serif;
-    font-size: 40px;
-    color:lightgoldenrodyellow
-}
-
-.dttme {
-    color: lightgoldenrodyellow;
-    font-size: 20px
+.blog {
+   
+    
 }

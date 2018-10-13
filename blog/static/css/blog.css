@@ -9,32 +9,35 @@
     display: flex;
     justify-content: center;
     color: #fff;
-    background-color: #fff; /* Blue */
+    background-color: #fff; /* white */
     padding: 50px 50px 50px 50px;
 }
 
-.menu {
 
-    background-color:antiquewhite;
-    border: 10px solid #fff; /* For debugging */
-    width:3500;
-    
+.menu {
+    background-color: antiquewhite;
+    box-shadow: 10px 10px 5px grey;
+     width: 3500;
 }
 
 
-a {
+h1 {
     color: #FCA205;
     font-family: 'Monoton', cursive;
     font-size:30px;
 }
 
-    a:hover {
+ .blog:hover h1 {
         color: #FCA205;
         text-decoration: none;
         font-family: 'Monoton', cursive;
         transform: scale(1, -1);
     }
- 
+
+ .blog:hover div.menu  {
+     color:aqua
+
+ }
 
 .blog-container {
     display:flex;
@@ -44,7 +47,3 @@ a {
     
 }
 
-.blog {
-   
-    
-}

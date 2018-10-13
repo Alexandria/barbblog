@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="stylesheet" href="{% static 'css/strgrthngs.css' %}">
+    <script src="{% static 'animation/changeMenu.js' %}"></script>
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
@@ -25,7 +25,7 @@
     -->
 
 </head>
-<body>
+<body id="upsideDown" >
 
 
     <!--
@@ -69,22 +69,22 @@
 
     -->
 
-    <div class="menu-container">
-        <div class="menu">
-            <div class="barb-pic"><img src="{% static 'imgs/barb_by_lornakelleherartScale.png' %}" /></div>
+    <div class="menu-container" id="menubackground">
+        <div class="menu" id="banner">
+            <div class="barb-pic" id="barb"><img src="{% static 'imgs/barb_by_lornakelleherartScale.png' %}" /></div>
             
         </div>
         
     </div>
-        <div class="blog-container">
+        <div class="blog-container" id="fullPost">
 
             {% for post in posts %}
-            <div class="blog">
-                <span id="postTitle"><h1><a href="#">{{ post.title }}</a></h1></span>
+            <div class="blog" onmouseover="mouseIn()" onmouseout="mouseOut()" >
+                <span id="postTitle"><h1>{{ post.title }}</h1></span>
                 <p><span class="dttme">published: {{ post.published_date }}</span></p>
                 <p><span class="blogText">{{ post.text|linebreaksbr }}</span></p>
             </div>
-                {% endfor %}
+            {% endfor %}
             
 
 

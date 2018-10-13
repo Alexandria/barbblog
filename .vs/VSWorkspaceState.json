@@ -1,10 +1,15 @@
 {
   "ExpandedNodes": [
+    "",
+    "\\blog",
+    "\\blog\\migrations",
     "\\blog\\static",
     "\\blog\\static\\animation",
     "\\blog\\static\\css",
+    "\\blog\\static\\imgs",
     "\\blog\\templates",
-    "\\blog\\templates\\blog"
+    "\\blog\\templates\\blog",
+    "\\mysite"
   ],
   "PreviewInSolutionExplorer": false
 }

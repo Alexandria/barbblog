@@ -7,7 +7,7 @@ function mouseIn() {
     var menu = document.getElementById("banner");
     var barb = document.getElementById("barb");
     menu.style.background = "url(/static/imgs/demag.png)"; 
-    barb.style.opacity = 0.4;
+    barb.style.opacity = 0.3;
 
 }
 
